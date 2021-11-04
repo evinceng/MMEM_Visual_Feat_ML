@@ -10,7 +10,7 @@ Created on Sat Oct 30 07:50:09 2021
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import Utils
+from . import Utils
 from datetime import datetime
 import os.path
 from pathlib import Path
@@ -110,12 +110,12 @@ def generateSubPlotsofOneSignalOfMultipleUsersWithAdVideoTimes(rootFolder, senso
 
 def getLowAndHighFactorUserIDS(userIDList, factorScoresFileName, selectedFactor, numberOfUsers=4):
     scores_df = pd.read_csv(factorScoresFileName)
-    scores_df = scores_df.loc[scores_df['userID'].isin(userIDList)] 
+    scores_df = scores_df.loc[scores_df['uID'].isin(userIDList)] 
     sorted_df = scores_df.sort_values(selectedFactor)
     
     # print(sorted_df['userID'][:numberOfUsers])
     # print(sorted_df['userID'][-numberOfUsers:])
-    return sorted_df['userID'][:numberOfUsers], sorted_df['userID'][-numberOfUsers:]
+    return sorted_df['uID'][:numberOfUsers], sorted_df['uID'][-numberOfUsers:]
     
 
 # print(fileNameGenerator(1, 2))

@@ -15,8 +15,8 @@ import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, RadioButtons
 from scipy.signal import butter,filtfilt
 
-from runExperiment_PictExamination import getSignalDf
-from runExperiment_PictExamination import  getUsersSignalsOfOneContent
+from . feturesCorrelations_tools import getSignalDf
+from . feturesCorrelations_tools import  getUsersSignalsOfOneContent
 import os.path
 from pathlib import Path
 

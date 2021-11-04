@@ -6,7 +6,7 @@ Created on Mon Jun 14 13:52:30 2021
 """
 
 import matplotlib.pyplot as plt
-import Utils
+from Tools import Utils
 
 def generateSubPlotsWithAdVideoTimesOfOneUser(uID, out_times_lst, yLabelDfDict, saveFigFilePath):
     

@@ -7,7 +7,7 @@ Created on Tue Sep 14 15:31:50 2021
 
 import matplotlib.pyplot as plt
 import pandas as pd
-import Utils
+from . import Utils
 import numpy as np
 
 def generateSignalSubplots_spec_amp(users, ax, axIndex, lowOrHighFactorUserIDs, sensorID, signalName, feature_code):

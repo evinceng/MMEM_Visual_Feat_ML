@@ -6,10 +6,10 @@ Created on Thu Jun 10 15:40:50 2021
 """
 
 
-from .Utils import *
-import archieve.TimeSyncHelper
-import archieve.generateSubPlots
-import archieve.generateTimeStampedDFs
+from Tools import Utils
+from archieve import TimeSyncHelper
+from archieve import generateSubPlots
+from archieve import generateTimeStampedDFs
 import pandas as pd
 import os.path
 from pathlib import Path
@@ -63,7 +63,7 @@ print(dfDict['empatica_ACC_df'])
 # print(dfDict['pupillabs_df'].head())
 
 #plot empatica shimmer plots  for synconozation 
-TimeSyncHelper.generateSynchedAbsoluteAccPlots(usersDictFileName, uID, dfDict['shimmer_df'] if "shimmer_df" in dfDict.keys() else pd.empty , dfDict['empatica_ACC_df'])
+TimeSyncHelper.generateSynchedAbsoluteAccPlots(usersDictFileName, uID, dfDict['shimmer_df'] if "shimmer_df" in dfDict.keys() else pd.empty , dfDict['empatica_ACC_df'], outputFolder)
 
 print('First cell finished... Read clap peak times from the figures and put them into usersDict.xlsx for the identified user empaticaClapPeakTime_sec, and shimmerClapPeakTime_sec.')
 

@@ -8,7 +8,7 @@ Created on Thu Jun 10 14:03:21 2021
 #Empatica
 import pandas as pd
 import matplotlib.pyplot as plt
-import Utils
+from Tools import Utils
 import numpy as np
 
 from IPython import get_ipython

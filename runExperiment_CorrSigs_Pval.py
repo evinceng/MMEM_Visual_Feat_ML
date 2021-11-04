@@ -334,7 +334,7 @@ else:
 
   
 #write mean and std to files
-low_mean_df, high_mean_df = 0, 0
+low_mean_df, high_mean_df, mean_df = 0, 0, 0
 if writeMeanStdToFilesQ:
     meanColNames = ['uID','inside_room_Mean', 'inside_room_Std', 'inside_room_Kurtosis',selectedFactor]
     meanFileNameBase = outputFolder + contentID + '/' + sensors[sensorID][0] +'/Mean_Std_Kurtosis_inside_room_' + sensors[sensorID][0] + '_'+  list(sensors[sensorID][1].keys())[0] + '_' + signalName + '_' + selectedFactor 

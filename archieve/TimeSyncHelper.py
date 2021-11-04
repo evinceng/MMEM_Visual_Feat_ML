@@ -7,7 +7,7 @@ Created on Fri Jun 11 13:21:43 2021
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import Utils
+from Tools import Utils
 
 def get_abs_acc(data_df, sensor_lab):
     
@@ -65,7 +65,7 @@ def saveSynchedDFToCsvFile(data_df, rootFolder, uID, fileNameKeyword):
     
     
 
-def generateSynchedAbsoluteAccPlots(usersDictFileName, uID, shimmer_df, empatica_ACC_df):
+def generateSynchedAbsoluteAccPlots(usersDictFileName, uID, shimmer_df, empatica_ACC_df, outputFolder):
     
     users = Utils.readDict(usersDictFileName)
     
@@ -110,7 +110,7 @@ def generateSynchedAbsoluteAccPlots(usersDictFileName, uID, shimmer_df, empatica
         ax[1].set_xlabel('t [s]')
         ax[1].set_ylabel('shimmer abs acc')
         ax[1].grid(True)
-    Utils.writePickleFile(fig, 'output/user' + str(uID) + '/uID-' + str(uID) + ' shimmer empatica abs acc')
+    Utils.writePickleFile(fig, outputFolder +'/user' + str(uID) + '/uID-' + str(uID) + ' shimmer empatica abs acc')
     plt.show()
 
 

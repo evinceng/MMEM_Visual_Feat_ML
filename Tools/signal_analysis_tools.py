@@ -53,7 +53,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as sst
 import scipy.signal as ssig
-import Utils as util
+from . import Utils as util
 from pathlib import Path
 import pickle
 import seaborn as sns

@@ -7,7 +7,7 @@ Created on Thu Aug  5 09:57:13 2021
 #resample the signals
 
 import numpy as np
-import Tools.interpolate_funs as intFuns
+from Tools import interpolate_funs as intFuns
 from scipy.interpolate import splev
 import matplotlib.pyplot as plt
 import glob, os

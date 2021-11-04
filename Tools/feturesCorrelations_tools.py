@@ -7,7 +7,7 @@ Created on Sat Oct 30 14:45:26 2021
 import numpy as np
 import pandas as pd
 from pathlib import Path
-import Tools.signal_analysis_tools as sat
+from . import signal_analysis_tools as sat
 
 #%% Functions
 

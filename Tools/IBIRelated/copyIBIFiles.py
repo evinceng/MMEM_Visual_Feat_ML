@@ -15,7 +15,7 @@ get_ipython().run_line_magic('matplotlib', 'qt5')
 from shutil import copyfile
 
 
-rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/output/user"
+rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/PsyUserSignals/user"
 
 copyFolder = "C:/Users/evinao/Documents/Paper2Data/IBIFiles/"
 

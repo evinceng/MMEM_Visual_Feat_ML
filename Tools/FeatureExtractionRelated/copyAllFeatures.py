@@ -19,7 +19,7 @@ contents = ['C1','C2','C3','C4'] #, 'C2','C3','C4'
 
 sensors = ['empatica', 'shimmer', 'tobii']
 
-rootFolder = "C:/Users/evinao/Documents/GitHub/SimplePlot_23_07_2021/SignalCorrelationR3_12users_RE/"
+rootFolder = "C:/Users/evinao/Documents/GitHub/MMEM_Visual_Feat_ML/SignalCorrelation/SignalCorrelationR3_12users_RE/"
 
 outputFile = "C:/Users/evinao/Documents/Paper2Data/UserFeaturesR3.csv"
 

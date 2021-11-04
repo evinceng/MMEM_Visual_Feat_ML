@@ -24,7 +24,7 @@ import seaborn as sns
 
 
 
-factorScoresFileName = "Data/MMEM_Scores_FNames/mmem_C1_argmin_F_df.csv"
+factorScoresFileName = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/MetaData/MMEM_Scores/mmem_C1_argmin_F_df.csv"
 
 # selectedFactor = 'AE'
 # selectedContent = 'C3'
@@ -33,14 +33,15 @@ factorList = ['AE','RE', 'AA', 'PI'] #,
 contentList = ['C1', 'C2', 'C3', 'C4'] #
 isOnlyLowHighScoreUsersList = [True, False]
 
-rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/output/user"
-usersDictFileName = "Data/usersDict.xlsx"
+rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/PsyUserSignals/user"
+metaDataFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/MetaData/"
+usersDictFileName = metaDataFolder + "usersDict.xlsx"
 cutdfFolder = 'CutDF/'
 numberofLowHighUsers = 12
 
 outputFolderBaseName = "SignalCorrelationR3_" + str(numberofLowHighUsers) +"users_"
 
-userSensorContentFileName =  "Data/userContentSensorDict.csv"
+userSensorContentFileName =  metaDataFolder + "userContentSensorDict.csv"
 
 
 empaticaSignals = { 'ACC':['AccX', 'AccY', 'AccZ'], 'EDA':['EDA'], 'BVP':['BVP'], 'HR':['HR']}
@@ -487,7 +488,7 @@ for selectedFactor in factorList:
                         
                         
                         if cutSignals:
-                            time_int = sat.getAdTimeInterval("Data/" + selectedContent + "_usersAdStartEndTimes.csv", cuID)
+                            time_int = sat.getAdTimeInterval(metaDataFolder + selectedContent + "_usersAdStartEndTimes.csv", cuID)
                             saveNumpyArraysToDf(sig_t, sig_x, sig_p_x, time_int)
                             
                         if feature_code == 'Gram_AF' or feature_code == 'Recurr_M' or feature_code == 'Markov_TF'or feature_code == 'Dyn_Time_W':

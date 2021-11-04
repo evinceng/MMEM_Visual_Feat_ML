@@ -22,8 +22,8 @@ avarageColName = 'diameter'
 newFileName = 'tobii_diameter'
 meanColName = 'inside_room_Mean'
 
-rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/output/user"
-sigCorrFolder = "C:/Users/evinao/Documents/GitHub/SimplePlot_23_07_2021/SignalCorrelation/"
+rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/PsyUserSignals/user"
+sigCorrFolder = "C:/Users/evinao/Documents/GitHub/MMEM_Visual_Feat_ML/SignalCorrelation/"
 
 
 uIDlist = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23,24,25, 26,27,28,29,30,31,32,33,34,35,36,
@@ -78,6 +78,8 @@ pupilLabs_diamter_mean = 37.236853739611774
 
 print(tobii_diameter_mean )
 print(pupilLabs_diamter_mean )
+
+Path(sigCorrFolder).mkdir(parents=True, exist_ok=True)
 
 for uID in uIDlist:        
     os.chdir(rootFolder + str(uID) +"/Resampled")

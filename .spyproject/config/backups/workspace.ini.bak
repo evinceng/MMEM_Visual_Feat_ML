@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = empty-project-type
-recent_files = ['archieve\\runExperiment_timeSynch_EAO.py', 'Tools\\signal_visualization_tool.py', 'archieve\\generateSubPlots.py', 'archieve\\generateTimeStampedDFs.py', 'archieve\\TimeSyncHelper.py', 'runClassification.py']
+recent_files = ['Tools\\FeatureExtractionRelated\\generateMultipleFeaturesR2_not updated.py', 'Tools\\FeatureExtractionRelated\\generateMultipleFeaturesR3.py', 'Tools\\FeatureExtractionRelated\\copyAllFeatures.py', 'Tools\\FeatureExtractionRelated\\geberateMultipleFeatures_Template.py', 'Tools\\signal_analysis_tools.py', 'Tools\\feturesCorrelations_tools.py']
 
 [main]
 version = 0.2.0

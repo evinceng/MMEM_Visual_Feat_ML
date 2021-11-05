@@ -641,7 +641,7 @@ def get_timesingal_feature(sig_t, sig_x, time_int = [], feature_pars = [], code=
         # the signal is constant
         if isConstantSignalProp < 0.001:
             print("Constant signal......")
-            return 0
+            return [0]
         #if the signal is not constant
         else:
             cut_f = feature_pars[0]

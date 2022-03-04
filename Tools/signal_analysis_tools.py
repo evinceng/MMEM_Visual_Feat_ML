@@ -579,7 +579,7 @@ def get_timesingal_feature(sig_t, sig_x, time_int = [], feature_pars = [], code=
         bands_lst = feature_pars
         M = len(bands_lst)
         feat_vec = []
-        feat_vec.append(sum(spec_phs[sig_f <= bands_lst[0]]))
+        # feat_vec.append(sum(spec_phs[sig_f <= bands_lst[0]]))
         for ii in range(len(bands_lst)-1):
             feat_vec.append(sum(spec_phs[(bands_lst[ii] <= sig_f) & (sig_f < bands_lst[ii+1])]))
         feat_vec.append(sum(spec_phs[bands_lst[-1] <= sig_f]))
@@ -600,7 +600,7 @@ def get_timesingal_feature(sig_t, sig_x, time_int = [], feature_pars = [], code=
         bands_lst = feature_pars
         M = len(bands_lst)
         feat_vec = []
-        feat_vec.append(sum(spec_pow[sig_f <= bands_lst[0]]))
+        # feat_vec.append(sum(spec_pow[sig_f <= bands_lst[0]]))
         for ii in range(len(bands_lst)-1):
             feat_vec.append(sum(spec_pow[(bands_lst[ii] <= sig_f) & (sig_f < bands_lst[ii+1])]))
         feat_vec.append(sum(spec_pow[bands_lst[-1] <= sig_f]))

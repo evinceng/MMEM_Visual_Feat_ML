@@ -22,8 +22,6 @@ import numpy as np
 import scipy.stats as sst
 import seaborn as sns
 
-
-
 factorScoresFileName = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/MetaData/MMEM_Scores/mmem_C1_argmin_F_df.csv"
 
 # selectedFactor = 'AE'

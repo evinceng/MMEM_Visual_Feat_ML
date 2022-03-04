@@ -7,6 +7,7 @@ Created on Sat Oct 30 07:40:56 2021
 
 empaticaSignals = { 'ACC':['AccX', 'AccY', 'AccZ'], 'EDA':['EDA'], 'BVP':['BVP'], 'HR':['HR']}
 
+
 shimmerSignals = {'':['Accel_LN_X_m/(s^2)', 'Accel_LN_Y_m/(s^2)',
            'Accel_LN_Z_m/(s^2)', #'GSR_Range_no_units.1', #I don't have it since not resampled includes nounits 
            'GSR_Skin_Conductance_microSiemens', 'GSR_Skin_Conductance_uS.1',

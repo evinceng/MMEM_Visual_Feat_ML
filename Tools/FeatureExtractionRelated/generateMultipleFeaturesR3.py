@@ -16,11 +16,13 @@ import matplotlib.pyplot as plt
 
 factorList = ['AE','RE', 'AA', 'PI'] #, 
 contentList = [ 'C3', 'C4', 'C1','C2',] #  
-isOnlyLowHighScoreUsersList = [False] #True, 
+isOnlyLowHighScoreUsersList = [True] #False, 
 
+isOnlyLowHighScoreUsersQ = True # True
+isOneUserQ = False #True
 rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/"
 
-outputFolderBaseName = "SignalCorrelation/"
+outputFolderBaseName = "SignalCorrelation_29-12-2021/"
 # outputFolder = "SignalCorrelation/"
 
 factorScoresFileName = rootFolder + "MetaData/MMEM_Scores/mmem_C1_argmin_F_df.csv"
@@ -58,11 +60,9 @@ writeMeanStdToFilesQ = True
 
 preproc_meth = 'lowpass'
 
-feature_codes = ['num_of_peaks', 'mean', ]
+feature_codes = ['std', 'kurtosis', 'slope', 'num_of_peaks', 'total_var', 'spec_phs', 'spec_pow', 'num_of_peaks', 'slope', 'total_var']
+#'mean', 
 
-
-isOnlyLowHighScoreUsersQ = False # True
-isOneUserQ = False #True
 
 doTransformationQ = True #True
 doNormalizationQ = True
@@ -81,7 +81,7 @@ saveStdMeanKurtosisQ = False
 
 # not copied part
 for selectedFactor in factorList:
-    outputFolder = outputFolderBaseName +selectedFactor + "/"
+    outputFolder = rootFolder + outputFolderBaseName + selectedFactor + "/"
     Path(outputFolder).mkdir(parents=True, exist_ok=True)
     pValuesFileName = outputFolder + '/AllPValues.csv'  
     

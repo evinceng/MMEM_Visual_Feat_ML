@@ -6,13 +6,13 @@ Created on Mon Aug 23 15:16:04 2021
 """
 import matplotlib.pyplot as plt
 import pandas as pd
-import Tools.Utils
+import Tools.Utils as utils
 from datetime import datetime
 import os.path
 from pathlib import Path
 import Tools.pictExamination_tools as pet
 
-from signalDics import *
+import signalDics as sigDics
 
 
 rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/"
@@ -38,8 +38,12 @@ sensorFileNameExt = 'ACC'# 'pupilCenter_left_eye'#'left_eye_2d' #EDA
 signalName = 'AccX' #'pc_x' #'diameter' # 'EDA'
 
 
-sensors = {1:['empatica', empaticaSignals] , 2:['shimmer', shimmerSignals],
-           3:['tobii',tobiiSignals],  4:['pupillabs', pupillabsSignals]}
+#list of selected signals from EDA
+empatica_sig_lst = ['EDA'] # ['ACC''EDA']
+empaticaSignals = pd.Series(sigDics.empaticaSignals).loc[empatica_sig_lst].to_dict()
+
+sensors = {1:['empatica', empaticaSignals] , 2:['shimmer', sigDics.shimmerSignals],
+           3:['tobii',sigDics.tobiiSignals],  4:['pupillabs', sigDics.pupillabsSignals]}
 #sensors = {1:['empatica', empaticaSignals]}
 
 # mmaesFactors = {1:'AE', 2:'RE', 3:'AA', 4:'PI'}
@@ -60,11 +64,14 @@ sensors = {1:['empatica', empaticaSignals] , 2:['shimmer', shimmerSignals],
 
 pictOutputFolder = "PictorialProof/"
 numberOfUsers = 6
-pet.createFiguresForAll(userFolder, pictOutputFolder, contentID, selectedFactor, usersDictFileName, outputFolderName, userIDColumnName, sensors, userSensorContentFileName, factorScoresFileName)  
+# pet.createFiguresForAll(userFolder, pictOutputFolder, contentID, selectedFactor, usersDictFileName, outputFolderName, userIDColumnName, sensors, userSensorContentFileName, factorScoresFileName)  
 
 # to view already created pickle files:
     
-# Utils.loadFigFromPickleFile(outputFolderName + 'C1/empatica/F2_empatica_HR_HR_2021_10_19-11-58-51.pickle')
+# utils.loadFigFromPickleFile(outputFolderName + 'C1/empatica/AE_empatica_EDA_EDA_2021_11_15-09-06-00.pickle')
+
+utils.loadFigFromPickleFile(outputFolderName + 'C1/tobii/AE_tobii_diameter_diameter_2021_11_15-09-08-02.pickle')
+# utils.loadFigFromPickleFile(outputFolderName + 'C1/shimmer/AE_shimmer__GSR_Skin_Conductance_microSiemens_2021_11_15-09-06-38.pickle')
 # Utils.loadFigFromPickleFile(outputFolderName + 'C1/tobii/F1_tobii_diameter_diameter_2021_10_19-12-59-13.pickle')
 # Utils.loadFigFromPickleFile(outputFolderName + 'C1/empatica/F2_empatica_ACC_AccX_2021_10_19-11-58-38.pickle')
 

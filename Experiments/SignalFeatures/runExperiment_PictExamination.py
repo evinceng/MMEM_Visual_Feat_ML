@@ -12,7 +12,7 @@ import os.path
 from pathlib import Path
 import Tools.pictExamination_tools as pet
 
-import signalDics as sigDics
+import Experiments.SignalFeatures.signalDics as sigDics
 
 
 rootFolder = "C:/Users/evinao/Dropbox (Lucami)/LivingLab MMEM data/"

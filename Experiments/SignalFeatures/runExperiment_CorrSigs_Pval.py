@@ -470,3 +470,5 @@ for feat in feature_types:
 
 # Utils.loadFigFromPickleFile('C:/Users/evinao/Documents/GitHub/SimplePlot_23_07_2021/SignalCorrelation/C1/tobii/Normalization_tobii_diameter_AE.pickle')
 # Utils.loadFigFromPickleFile('C:/Users/evinao/Documents/GitHub/SimplePlot_23_07_2021/SignalCorrelation/C1/empatica/AE_empatica_EDA_spec_comp sig_f vs sig_comp.pickle')
+
+# %%
